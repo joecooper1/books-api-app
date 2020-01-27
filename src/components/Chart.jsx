@@ -15,10 +15,12 @@ function Bookchart({ books }) {
     );
   });
   return (
-    <Bar
+    <Pie
       id="bookchart"
       data={data}
-      options={{ maintainAspectRatio: true, responsive: true }}
+      options={{ maintainAspectRatio: false, responsive: true }}
+      legend={{ position: "left", align: "end" }}
+      title={{ text: "Page count", display: "true" }}
     />
   );
 }

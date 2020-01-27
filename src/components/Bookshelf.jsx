@@ -18,7 +18,7 @@ class Bookshelf extends React.Component {
 
   componentDidMount() {
     fetch(
-      "https://www.googleapis.com/books/v1/volumes?q=elmore+inauthor&maxResults=10"
+      "https://www.googleapis.com/books/v1/volumes?q=george_r_r_martin+inauthor&maxResults=10"
     )
       .then(response => {
         return response.json();

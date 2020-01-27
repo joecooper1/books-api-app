@@ -7,7 +7,7 @@ function Booklist({ books }) {
         console.log(book.volumeInfo);
         return (
           <li key={book.id}>
-            {book.volumeInfo.title}, {book.volumeInfo.authors[0] || null}
+            {book.volumeInfo.title}, {book.volumeInfo.authors[0]}
           </li>
         );
       })}
