@@ -5,11 +5,13 @@ function Booklist({ books }) {
     <ul>
       {books.map(book => {
         console.log(book.volumeInfo);
-        return (
-          <li key={book.id}>
-            {book.volumeInfo.title}, {book.volumeInfo.authors[0]}
-          </li>
-        );
+        if (book.volumeInfo.authors) {
+          return (
+            <button key={book.id}>
+              {book.volumeInfo.title}, {book.volumeInfo.authors[0]}
+            </button>
+          );
+        }
       })}
     </ul>
   );
