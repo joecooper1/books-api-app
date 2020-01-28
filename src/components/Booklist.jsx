@@ -1,13 +1,21 @@
 import React from "react";
 
-function Booklist({ books }) {
+function Booklist({ books, selectBook }) {
   return (
     <ul id="booklist">
       {books.map(book => {
-        console.log(book.volumeInfo);
-        if (book.volumeInfo.authors) {
+        if (book.volumeInfo.authors && book.volumeInfo.imageLinks) {
           return (
-            <button key={book.id}>
+            <button
+              key={book.id}
+              className="title"
+              onClick={() => selectBook(book)}
+            >
+              <img
+                src={book.volumeInfo.imageLinks.smallThumbnail}
+                alt={book.volumeInfo.title + "cover"}
+              ></img>{" "}
+              <br />
               {book.volumeInfo.title}, {book.volumeInfo.authors[0]}
             </button>
           );

@@ -18,9 +18,15 @@ function Bookchart({ books }) {
     <Pie
       // id="bookchart"
       data={data}
-      options={{ maintainAspectRatio: false, responsive: true }}
-      legend={{ position: "left", align: "end" }}
+      options={{
+        maintainAspectRatio: false,
+        responsive: true
+      }}
+      position="right"
+      legend={{ position: "right", align: "start", display: "false" }}
       title={{ text: "Page count", display: "true" }}
+      width="30"
+      height="30"
     />
   );
 }
