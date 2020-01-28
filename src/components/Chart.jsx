@@ -16,7 +16,7 @@ function Bookchart({ books }) {
   });
   return (
     <Pie
-      id="bookchart"
+      // id="bookchart"
       data={data}
       options={{ maintainAspectRatio: false, responsive: true }}
       legend={{ position: "left", align: "end" }}
